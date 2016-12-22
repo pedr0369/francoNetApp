@@ -1,0 +1,18 @@
+<ion-view view-title="{{postCategory.category.title}}">
+  <ion-content>
+      
+      <a class="card" ng-repeat="post in postCategory.posts | limitTo: 12" href="#/app/noticias/{{post.id}}">
+            <div class="item item-avatar item-positive item-icon-left">
+                 <img ng-src="{{post.thumbnail}}" alt="{{post.title}}" title="{{post.title}}" width="100%" height="200px">
+                <b style="color: white;">{{post.title}}</b>
+                <p style="color: white;">{{post.excerpt.substr(3, 45) + '...'}}</p>
+            </div>
+          
+            <div class="item item-image">
+                <img ng-src="{{post.thumbnail}}">
+            </div>
+      </a>      
+      
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,22 @@
+<ion-view view-title="{{post.post.title}}">
+  <ion-content>
+      
+        <div class="card">
+            <div class="item item-divider item-positive item-icon-left">
+                 {{post.post.title}}
+            </div>
+          
+            <div class="item item-image">
+                  <img ng-src="{{post.post.thumbnail}}" alt="{{post.post.title}}" title="{{post.post.title}}" >
+            </div>
+            <div class="item item-text-wrap">
+                    <div id="conteudo"></div>
+            </div>                                         
+        </div>
+		
+        <div id="conteudo" style="font-size: 17px; margin: 0 10%; font-weight: 100; font-family: helvetica;"></div>
+        
+      
+  </ion-content>
+</ion-view>
+

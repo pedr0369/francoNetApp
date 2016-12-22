@@ -1,0 +1,20 @@
+<ion-view view-title="FrancoNet" style="background: #fefefe;">
+  <ion-content class="has-header has-footer">
+      
+    <label class="item item-input">
+        <input class="input-label" type="text" placeholder="Pesquisar noticia" ng-model="searchNotice">
+    </label>
+      
+    <a class="card" ng-repeat="noticia in noticias.posts | limitTo: 12 | filter:searchNotice" href="#/app/noticias/{{noticia.id}}">
+            <div class="item item-avatar item-positive item-icon-left">
+                <img ng-src="{{noticia.thumbnail}}" alt="{{noticia.title}}" title="{{noticia.title}}" width="100%" height="200px">
+                <b style="color: white;">{{noticia.title}}</b>
+                <p style="color: white;">{{noticia.excerpt.substr(3, 45) + '...'}}</p>
+            </div>
+        
+            <div class="item item-image">
+                <img ng-src="{{noticia.thumbnail}}">
+            </div>
+    </a>
+  </ion-content>
+</ion-view>
